@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --color-brand-500: oklch(0.67 0.15 280);
+  --radius-xl: 1rem;
+}
+ 
