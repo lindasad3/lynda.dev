@@ -77,24 +77,13 @@ function HeroSection() {
             </motion.div>
 
             <motion.div className="mt-8 flex flex-wrap gap-2 justify-center lg:justify-start" initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.35}}>
-              {["React", "TypeScript", "Node.js", "Express", "MongoDB", "Framer Motion", "Tailwind", "shadcn/ui"].map(t => (
+              {["JavaScript", "HTML/CSS", "React", "TypeScript", "Node.js", "Express", "MongoDB", "SQL", "Framer Motion", "Tailwind"   ].map(t => (
                 <Badge key={t} variant="outline" className="border-gray-300 text-gray-600">{t}</Badge>
               ))}
             </motion.div>
           </div>
 
-          {/* Glass card */}
-          <motion.div className="lg:col-span-5" initial={{opacity:0, scale:0.98}} animate={{opacity:1, scale:1}} transition={{duration:0.6, delay:0.15}}>
-            <div className="rounded-3xl border border-gray-200/70 bg-white/60 backdrop-blur-xl shadow-xl p-6 md:p-8">
-              <h3 className="text-lg font-semibold">Signature Micro‑Interactions</h3>
-              <p className="text-gray-600 mt-2">Motion that feels natural: springy entrances, hover magnetism, and scroll‑linked reveals.</p>
-              <ul className="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside">
-                <li>Scroll‑reveal sections</li>
-                <li>Magnetic buttons & tilt cards</li>
-                <li>Accessible, keyboard‑friendly UI</li>
-              </ul>
-            </div>
-          </motion.div>
+           
         </div>
       </div>
     </section>
@@ -115,7 +104,7 @@ function MarqueeTech() {
           transition={{ repeat: Infinity, duration: 24, ease: "linear" }}
         >
           {Array.from({ length: 16 }).map((_, i) => (
-            <span key={i} className="text-gray-500">React • Tailwind • Framer Motion • TypeScript • Node • Express • MongoDB • Vite</span>
+            <span key={i} className="text-gray-500">React • JavaScript • HTML/CSS • Tailwind • Framer Motion • TypeScript • Node • Express • MongoDB • Vite</span>
           ))}
         </motion.div>
       </div>
@@ -126,26 +115,46 @@ function MarqueeTech() {
 /*******************
  *   WORK GRID      *
  *******************/
+// Remplace ton tableau existant par celui-ci
 const PROJECTS = [
   {
-    title: "Pinkify – K‑Pop Concerts",
-    desc: "MERN platform with artist pages, favorites, and admin dashboard.",
-    tags: ["React", "Express", "MongoDB", "JWT"],
-    href: "#",
+    title: "Pinkify – K-Pop Concerts",
+    desc: "MERN platform with artist pages, favorites, and an admin dashboard (JWT). MVP delivered in 3 days.",
+    tags: ["React", "Express", "MongoDB", "JWT", "Tailwind"],
+    href: "https://example.com/pinkify", // live ou démo (remplace)
   },
   {
-    title: "Kuramono Data QA Dashboard",
-    desc: "Data quality review queue, status workflows, and AI metrics.",
-    tags: ["React", "Framer Motion", "Charts"],
-    href: "#",
+    title: "Kuramono — Data QA Dashboard",
+    desc: "Internal React tool for curators to validate/correct AI metadata with a clean, fast review flow.",
+    tags: ["React", "Framer Motion", "Tailwind"],
+    href: "https://example.com/kuramono-demo", // lien vidéo demo ou case study
   },
   {
-    title: "GraphMark Studio",
-    desc: "Branding + web design system with components & tokens.",
-    tags: ["Design", "Tailwind", "shadcn/ui"],
-    href: "#",
+    title: "Entreprise AZ — Vitrine (SEO local)",
+    desc: "Local business website. First page on Google Maps for 'maçon Gisors' • +20% quote requests.",
+    tags: ["Vite", "Tailwind", "SEO Local"],
+    href: "https://example.com/entreprise-az", // URL du site si public
+  },
+  {
+    title: "CodeWallet — Snippet Manager",
+    desc: "Local snippet manager with instant search and dark mode to speed up daily dev work.",
+    tags: ["Electron", "React"],
+    href: "https://github.com/ton-user/codewallet", // repo ou page produit
+  },
+  {
+    title: "Portfolio UI Kit — Tailwind",
+    desc: "Reusable cards/sections/buttons to ship polished sites in 48h.",
+    tags: ["Vite", "Tailwind", "shadcn/ui"],
+    href: "https://example.com/portfolio-kit", // live ou repo
+  },
+  {
+    title: "Landing SaaS — Starter",
+    desc: "Conversion-first landing (hero, social proof, pricing, FAQ) with clean motion.",
+    tags: ["Vite", "Tailwind", "Framer Motion"],
+    href: "https://example.com/saas-landing", // live / démo / Figma public
   },
 ];
+
 
 function WorkShowcase() {
   return (
@@ -208,7 +217,7 @@ function AboutMe() {
           <ul className="mt-6 space-y-2 text-gray-700">
             <li>• Strong foundations in React, routing, state & data fetching</li>
             <li>• UI systems with Tailwind + shadcn/ui</li>
-            <li>• Express + MongoDB backends, JWT auth</li>
+            <li>• Express + MongoDB backends, JWT auth, SQL</li>
             <li>• Animations & micro‑interactions with Framer Motion</li>
           </ul>
           <div className="mt-6 flex gap-3">
@@ -278,11 +287,11 @@ function SiteFooter() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-gray-500">© {new Date().getFullYear()} Lynda Sadoudi. All rights reserved.</p>
         <div className="flex items-center gap-3">
-          <a href="mailto:hello@lynda.dev" className="text-sm text-gray-600 hover:text-blue-700">hello@lynda.dev</a>
+          <a href="mailto:hello@lynda.dev" className="text-sm text-gray-600 hover:text-blue-700">lynda.sadoudi2@gmail.com</a>
           <span className="text-gray-300">•</span>
-          <a href="https://github.com/yourhandle" className="text-sm text-gray-600 hover:text-blue-700">GitHub</a>
+          <a href="https://github.com/lindasad3" className="text-sm text-gray-600 hover:text-blue-700">GitHub</a>
           <span className="text-gray-300">•</span>
-          <a href="https://linkedin.com/in/yourhandle" className="text-sm text-gray-600 hover:text-blue-700">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/lynda-sadoudi-66008a167/" className="text-sm text-gray-600 hover:text-blue-700">LinkedIn</a>
         </div>
       </div>
     </footer>
