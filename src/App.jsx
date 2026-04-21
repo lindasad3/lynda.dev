@@ -1,20 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import { Route, Routes } from 'react-router-dom'
-import { motion } from "motion/react"
 import Portfolio from './Portfolio'
 import Contact from './pages/Contact'
+import Kuramono from "./pages/Kuramono.jsx"
+import ColorPoint from "./pages/ColorPoint.jsx"
+import Softseoul from "./pages/Softseoul.jsx"
 
- function App() {
-  return ( <>
-
-    
-          <Routes>
+function App() {
+  return (
+    <Routes>
       <Route path="/" element={<Portfolio />} />
-       <Route path="/Contact" element={<Contact />} />
+      <Route path="/kuramono" element={<Kuramono />} />     
+      <Route path="/colorpoint" element={<ColorPoint />} />
+      <Route path="/softseoul" element={<Softseoul />} />
+      <Route path="/Contact" element={<Contact />} />
     </Routes>
-  </>)
+  )
 }
 
 export default App
