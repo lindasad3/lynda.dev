@@ -10,42 +10,47 @@ import {
   PenSquare,
   Globe,
   LayoutGrid,
-  BookOpen,
   ChevronRight,
+  Brain,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
+/* -------------------- DATA -------------------- */
+
 const PROJECTS = [
   {
-    title: "Softseoul — K-Beauty Brand & E-commerce",
-    category: "Branding & Digital Communication",
+    title: "SoftSeoul",
+    category: "E-commerce & Branding",
+    subtitle: "L’autorité par l’éducation",
     description:
-      "Construction d’un univers visuel cohérent pour une boutique de cosmétiques coréens, avec une attention portée au storytelling, à la désirabilité et à la lisibilité commerciale.",
+      "Création d’une marque K-Beauty avec une stratégie de contenu pensée pour éduquer avant de vendre : pédagogie produit, positionnement anti-trend et funnel de confiance.",
     impact:
-      "Clarifier l’offre, renforcer la perception premium et mieux traduire la promesse de marque sur les supports digitaux.",
-    tags: ["Brand Identity", "Content Strategy", "E-commerce", "Visual Direction"],
+      "Mise en place d’un parcours contenu : attirer, construire la confiance, puis introduire l’offre produit.",
+    tags: ["Branding", "Content Strategy", "Social Commerce"],
     image: "/gemini softseoul.webp",
     link: "/softseoul",
   },
   {
-    title: "Kuramono — IA, Art & Pédagogie",
-    category: "UX Writing & Product Thinking",
+    title: "Kuramono",
+    category: "UX Writing & Tech",
+    subtitle: "Vulgariser l’invisible",
     description:
-      "Travail autour de la vulgarisation de concepts liés à l’IA et à l’art, avec une approche centrée sur la compréhension utilisateur et la réduction de la friction cognitive.",
+      "Travail d’UX writing et de design d’interface pour rendre une plateforme liée à l’IA plus lisible, plus rassurante et plus simple à comprendre.",
     impact:
-      "Transformer une technologie intimidante en expérience plus intuitive, plus rassurante et plus compréhensible.",
-    tags: ["UX Writing", "AI", "Interface Thinking", "Pedagogy"],
+      "Clarification du parcours utilisateur et réduction de la friction cognitive.",
+    tags: ["UX Writing", "Product Design", "AI"],
     image: "/kura1.jpg",
     link: "/kuramono",
   },
   {
-    title: "ColorPoint — Communication Visuelle",
-    category: "Content Design & Communication",
+    title: "ColorPoint Istanbul",
+    category: "Creative Strategy",
+    subtitle: "Le B2B n’est pas ennuyeux",
     description:
-      "Création de contenus graphiques et de supports explicatifs pour rendre des services techniques plus accessibles à des clients non experts.",
+      "Création de supports visuels et marketing pour rendre des services techniques plus compréhensibles, plus attractifs et plus faciles à présenter.",
     impact:
-      "Mieux valoriser l’offre, rendre les messages plus compréhensibles et soutenir la conversion commerciale.",
-    tags: ["Graphic Design", "Communication", "Social Media", "Visual Clarity"],
+      "Alignement entre identité visuelle, clarté commerciale et perception professionnelle.",
+    tags: ["B2B", "Graphic Design", "Communication"],
     image: "/Gemini_Generated_Image_qawic6qawic6qawi.png",
     link: "/colorpoint",
   },
@@ -53,57 +58,115 @@ const PROJECTS = [
 
 const SKILLS = [
   {
-    title: "Communication Digitale",
+    title: "Psychologie & UX",
+    icon: Brain,
+    items: [
+      "Comprendre ce qui rassure",
+      "Identifier les points de friction",
+      "Rendre l’action plus naturelle",
+    ],
+  },
+  {
+    title: "Analyse & Performance",
     icon: Megaphone,
-    items: ["Stratégie de contenu", "Hiérarchisation du message", "Communication de marque"],
+    items: [
+      "Lire les signaux",
+      "Structurer les priorités",
+      "Chercher les leviers d’amélioration",
+    ],
   },
   {
-    title: "Design & Contenu",
+    title: "Brand Identity",
     icon: Palette,
-    items: ["Figma", "Direction visuelle", "Supports éditoriaux et réseaux sociaux"],
+    items: [
+      "Systèmes visuels cohérents",
+      "Perception de valeur",
+      "Confiance de marque",
+    ],
   },
   {
-    title: "UX Writing & Pédagogie",
-    icon: PenSquare,
-    items: ["Microcopy", "Vulgarisation", "Parcours plus lisibles"],
-  },
-  {
-    title: "Vision Produit",
+    title: "Growth Design",
     icon: LayoutGrid,
-    items: ["Clarté d’interface", "Structure", "Cohérence entre fond et forme"],
+    items: [
+      "Contenu comme point de contact",
+      "Pages orientées clarté",
+      "Expérience qui guide l’utilisateur",
+    ],
+  },
+];
+
+const METHOD = [
+  {
+    title: "Clarté",
+    text: "Transformer un message complexe en contenu compréhensible, lisible et mémorisable.",
+  },
+  {
+    title: "Confiance",
+    text: "Construire une perception crédible grâce à la pédagogie, la cohérence visuelle et le bon niveau d’information.",
+  },
+  {
+    title: "Désir",
+    text: "Rendre une offre plus attractive sans la sur-vendre, en travaillant son storytelling et sa valeur perçue.",
+  },
+  {
+    title: "Action",
+    text: "Créer des parcours qui réduisent la friction et rendent le passage à l’action plus naturel.",
   },
 ];
 
 const EXPERIENCE = [
   {
-    title: "ColorPoint Istanbul",
-    role: "Graphic Designer & Communication Intern",
-    meta: "Istanbul · 2023",
+    title: "Elara Beautyyi",
+    role: "Growth Marketer & SEO",
+    meta: "Mai 2026 — Présent",
     description:
-      "Création de supports visuels, contenus marketing et éléments de communication pour rendre des services plus attractifs et plus compréhensibles.",
+      "Optimisation SEO technique et sémantique sur Shopify, amélioration de la visibilité organique et participation à des tests A/B orientés conversion.",
   },
   {
-    title: "Softseoul",
-    role: "Branding, communication & réflexion e-commerce",
-    meta: "Projet entrepreneurial",
+    title: "SoftSeoul",
+    role: "Fondatrice & E-commerce Manager",
+    meta: "Depuis 2024",
     description:
-      "Développement d’un regard stratégique sur la marque, la présentation produit, l’univers visuel et la mise en valeur de l’offre en ligne.",
+      "Création d’une marque de K-Beauty : branding, sourcing, social media, stratégie inbound et réflexion autour de la confiance de marque.",
   },
   {
     title: "Kuramono",
-    role: "Réflexion UX writing & design pédagogique autour de l’IA",
-    meta: "Projet produit / innovation",
+    role: "UI/UX Designer",
+    meta: "Berlin · 2025",
     description:
-      "Travail sur la manière d’expliquer un outil technologique complexe à des utilisateurs créatifs sans les perdre ni les intimider.",
+      "Conception d’interfaces pour une plateforme d’art génératif IA, création du design system et prototypage utilisateur.",
+  },
+  {
+    title: "Entreprise AZ",
+    role: "Webmaster & Consultante SEO",
+    meta: "2024",
+    description:
+      "Développement du site vitrine et optimisation SEO locale afin d’améliorer la visibilité et la génération de leads.",
+  },
+  {
+    title: "Color Point",
+    role: "Designer Graphique",
+    meta: "Istanbul · 2023",
+    description:
+      "Création d’identités visuelles et supports marketing digitaux et print pour améliorer la lisibilité des offres.",
   },
 ];
+
+const EDUCATION = [
+  "Master Responsable Marketing Digital — Nexa Digital School",
+  "Bootcamp Web Development MERN — Ironhack Paris",
+  "Bachelor 2 Design Graphique & UX/UI — L’École Multimédia",
+  "L2 Mathématiques Appliquées — Université Paris Cité",
+];
+
+/* -------------------- MAIN -------------------- */
 
 export default function Portfolio() {
   return (
     <main className="bg-[#F7F7FB] text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-700">
       <PortfolioNavbar />
       <HeroSection />
-      <PhilosophySection />
+      <MethodSection />
       <ExpertiseRibbon />
       <ProjectsSection />
       <SkillsSection />
@@ -113,6 +176,8 @@ export default function Portfolio() {
     </main>
   );
 }
+
+/* -------------------- NAVBAR -------------------- */
 
 function PortfolioNavbar() {
   return (
@@ -129,12 +194,15 @@ function PortfolioNavbar() {
           <a href="#portfolio-home" className="no-underline transition-colors hover:text-indigo-600">
             Accueil
           </a>
+
           <a href="#projects" className="no-underline transition-colors hover:text-indigo-600">
-            Projets
+            Case Studies
           </a>
+
           <a href="#expertise" className="no-underline transition-colors hover:text-indigo-600">
             Expertise
           </a>
+
           <a
             href="#contact"
             className="rounded-full bg-indigo-600 px-5 py-2.5 font-semibold text-white no-underline transition-all hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-200"
@@ -146,6 +214,8 @@ function PortfolioNavbar() {
     </nav>
   );
 }
+
+/* -------------------- HERO -------------------- */
 
 function HeroSection() {
   const { scrollY } = useScroll();
@@ -171,18 +241,21 @@ function HeroSection() {
         >
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-white/80 px-4 py-2 text-[11px] font-black uppercase tracking-[0.24em] text-indigo-600 shadow-sm">
             <Sparkles className="h-3.5 w-3.5" />
-            Disponible pour alternance et opportunités créatives
+            Alternance en Septembre 2026
           </div>
 
           <h1 className="text-5xl font-black tracking-[-0.05em] text-slate-950 md:text-7xl xl:text-[5.6rem] xl:leading-[0.95]">
-            Je transforme la <span className="italic text-indigo-600 font-serif font-medium">complexité</span>
+            Je ne crée pas juste du contenu.
             <br />
-            digitale en expériences évidentes.
+            <span className="italic text-indigo-600 font-serif font-medium">
+              Je crée de la clarté.
+            </span>
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">
-            Entre communication, design et pédagogie, je conçois des contenus et des interfaces
-            qui rendent les messages plus clairs, plus désirables et plus faciles à comprendre.
+            J’aide les marques à rendre leur message plus visible, plus
+            compréhensible et plus engageant grâce à une approche qui relie
+            marketing digital, UX/UI et stratégie de contenu.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -190,7 +263,7 @@ function HeroSection() {
               href="#projects"
               className="inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-950 px-7 py-4 text-sm font-bold text-white no-underline transition-all hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-xl"
             >
-              Explorer mes projets
+              Découvrir mon approche
               <ArrowRight className="h-4 w-4" />
             </a>
 
@@ -202,6 +275,7 @@ function HeroSection() {
               >
                 <Linkedin className="h-5 w-5" />
               </a>
+
               <a
                 href="mailto:lynda.sadoudi2@gmail.com"
                 aria-label="Email"
@@ -212,9 +286,22 @@ function HeroSection() {
             </div>
           </div>
 
-          <div className="mt-8 flex items-center gap-2 text-sm font-medium text-slate-500">
-            <BookOpen className="h-4 w-4 text-indigo-500" />
-            Focus : UX Writing, communication digitale, vulgarisation & design pédagogique
+          <div className="mt-8 flex flex-wrap gap-3">
+            {[
+              "SEO",
+              "Content Strategy",
+              "E-commerce",
+              "UX/UI",
+              "CRO",
+              "React",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-full bg-white px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-slate-700 shadow-sm"
+              >
+                {item}
+              </div>
+            ))}
           </div>
         </motion.div>
 
@@ -238,12 +325,14 @@ function HeroSection() {
             </div>
           </div>
 
-          <div className="absolute -bottom-6 right-4 max-w-[15rem] rounded-[1.7rem] border border-white/70 bg-white/90 p-5 shadow-xl backdrop-blur">
+          <div className="absolute -bottom-6 right-4 max-w-[16rem] rounded-[1.7rem] border border-white/70 bg-white/90 p-5 shadow-xl backdrop-blur">
             <p className="text-[10px] font-black uppercase tracking-[0.24em] text-indigo-500">
-              Positionnement
+              Profil hybride
             </p>
+
             <p className="mt-2 text-sm leading-relaxed text-slate-600">
-              Communication claire, vision design et sens du message au service d’expériences plus lisibles.
+              Data-driven creativity : analyse, design et marketing au service
+              d’expériences plus claires.
             </p>
           </div>
         </motion.div>
@@ -252,26 +341,47 @@ function HeroSection() {
   );
 }
 
-function PhilosophySection() {
-  return (
-    <section className="border-y border-slate-100 bg-white px-6 py-20">
-      <div className="mx-auto max-w-5xl text-center">
-        <p className="text-[11px] font-black uppercase tracking-[0.28em] text-indigo-500">
-          Ma philosophie de travail
-        </p>
-        <h2 className="mx-auto mt-6 max-w-4xl text-3xl font-light leading-relaxed text-slate-700 md:text-4xl">
-          “Le design n’est pas là pour décorer. Il sert à rendre évident ce qui ne l’est pas encore.”
-        </h2>
+/* -------------------- METHOD -------------------- */
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {[
-            ["Simplicité", "Retirer le bruit pour laisser apparaître le message essentiel."],
-            ["Clarté", "Structurer l’information pour que l’utilisateur comprenne sans effort."],
-            ["Impact", "Relier esthétique, contenu et intention pour soutenir la perception de valeur."],
-          ].map(([title, text]) => (
-            <div key={title} className="rounded-[2rem] border border-slate-100 bg-slate-50 p-7 text-left">
-              <h3 className="text-xl font-bold text-slate-900">{title}</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-500">{text}</p>
+function MethodSection() {
+  return (
+    <section className="border-y border-slate-100 bg-white px-6 py-24">
+      <div className="mx-auto max-w-6xl">
+        <div className="max-w-3xl">
+          <p className="text-[11px] font-black uppercase tracking-[0.28em] text-indigo-500">
+            Mon approche
+          </p>
+
+          <h2 className="mt-5 text-4xl font-black tracking-[-0.04em] text-slate-950 md:text-5xl">
+            Je relie analyse, design et marketing.
+          </h2>
+
+          <p className="mt-6 text-lg leading-relaxed text-slate-600">
+            Ma formation en mathématiques m’a donné une logique structurée.
+            Mon parcours en design et UX/UI m’a appris à rendre les idées
+            visibles, lisibles et désirables. Aujourd’hui, j’utilise cette
+            double approche pour construire des expériences digitales plus
+            claires et plus orientées action.
+          </p>
+        </div>
+
+        <div className="mt-16 grid gap-6 md:grid-cols-4">
+          {METHOD.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-[2rem] border border-slate-100 bg-slate-50 p-7"
+            >
+              <div className="mb-5 inline-flex rounded-2xl bg-indigo-100 p-3 text-indigo-600">
+                <Brain className="h-5 w-5" />
+              </div>
+
+              <h3 className="text-2xl font-bold text-slate-950">
+                {item.title}
+              </h3>
+
+              <p className="mt-4 text-sm leading-7 text-slate-500">
+                {item.text}
+              </p>
             </div>
           ))}
         </div>
@@ -280,17 +390,20 @@ function PhilosophySection() {
   );
 }
 
+/* -------------------- RIBBON -------------------- */
+
 function ExpertiseRibbon() {
   const items = [
-    "Communication Digitale",
-    "UX Writing",
-    "Direction Visuelle",
-    "Storytelling",
-    "Pédagogie",
-    "Content Design",
-    "Brand Thinking",
-    "Social Media",
-    "Clarté d’interface",
+    "SEO",
+    "Content Strategy",
+    "E-commerce",
+    "CRO",
+    "Social Ads",
+    "UX/UI",
+    "Branding",
+    "React",
+    "Shopify",
+    "GA4",
   ];
 
   return (
@@ -304,7 +417,9 @@ function ExpertiseRibbon() {
           <div key={i} className="flex items-center gap-8 px-4">
             {items.map((item) => (
               <div key={`${item}-${i}`} className="flex items-center gap-8">
-                <span className="text-xl font-serif italic text-slate-300 md:text-2xl">{item}</span>
+                <span className="text-xl font-serif italic text-slate-300 md:text-2xl">
+                  {item}
+                </span>
                 <span className="h-1.5 w-1.5 rounded-full bg-slate-200" />
               </div>
             ))}
@@ -315,6 +430,8 @@ function ExpertiseRibbon() {
   );
 }
 
+/* -------------------- PROJECTS -------------------- */
+
 function ProjectsSection() {
   return (
     <section id="projects" className="px-6 py-28">
@@ -322,15 +439,17 @@ function ProjectsSection() {
         <div className="mb-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="text-[11px] font-black uppercase tracking-[0.28em] text-indigo-500">
-              Projets sélectionnés
+              Case Studies
             </p>
+
             <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] text-slate-950 md:text-5xl">
-              Des projets où le fond et la forme avancent ensemble.
+              Ici, je ne montre pas seulement des visuels.
             </h2>
           </div>
+
           <p className="max-w-md text-sm leading-6 text-slate-500">
-            J’utilise le contenu, la structure et le design pour rendre des sujets plus compréhensibles,
-            des offres plus désirables et des expériences plus cohérentes.
+            Je montre comment le contenu, le design et la stratégie peuvent
+            rendre une marque plus claire, plus crédible et plus engageante.
           </p>
         </div>
 
@@ -340,12 +459,14 @@ function ProjectsSection() {
               key={project.title}
               to={project.link}
               className="group no-underline"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <article className="flex h-full flex-col overflow-hidden rounded-[2rem] border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-indigo-200 hover:shadow-2xl">
                 <div className="relative overflow-hidden">
                   <div className="absolute right-4 top-4 z-10 rounded-full bg-white/90 px-3 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-indigo-600 shadow-sm">
                     {project.category}
                   </div>
+
                   <img
                     src={project.image}
                     alt={project.title}
@@ -357,13 +478,23 @@ function ProjectsSection() {
                   <h3 className="text-2xl font-bold tracking-tight text-slate-950">
                     {project.title}
                   </h3>
-                  <p className="mt-4 text-sm leading-6 text-slate-600">{project.description}</p>
+
+                  <p className="mt-1 text-sm font-semibold italic text-indigo-600">
+                    {project.subtitle}
+                  </p>
+
+                  <p className="mt-4 text-sm leading-6 text-slate-600">
+                    {project.description}
+                  </p>
 
                   <div className="mt-5 rounded-2xl bg-slate-50 p-4">
                     <p className="text-[10px] font-black uppercase tracking-[0.22em] text-slate-400">
-                      Impact recherché
+                      Intention stratégique
                     </p>
-                    <p className="mt-2 text-sm leading-6 text-slate-600">{project.impact}</p>
+
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                      {project.impact}
+                    </p>
                   </div>
 
                   <div className="mt-5 flex flex-wrap gap-2">
@@ -391,8 +522,7 @@ function ProjectsSection() {
   );
 }
 
-
-
+/* -------------------- SKILLS -------------------- */
 
 function SkillsSection() {
   return (
@@ -401,20 +531,23 @@ function SkillsSection() {
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
             <p className="text-[11px] font-black uppercase tracking-[0.28em] text-indigo-300">
-              Expertise
+              Mes leviers
             </p>
+
             <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] md:text-5xl">
-              Une approche à la croisée du contenu, du design et du sens.
+              Un mix de marketing digital, design et réflexion utilisateur.
             </h2>
+
             <p className="mt-6 max-w-md text-sm leading-7 text-slate-400">
-              Mon travail consiste souvent à prendre une matière complexe, technique ou peu lisible,
-              puis à lui donner une forme claire, cohérente et engageante.
+              Je pense chaque contenu, page ou interface comme un point de
+              contact qui peut clarifier, rassurer et guider l’utilisateur.
             </p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2">
             {SKILLS.map((skill) => {
               const Icon = skill.icon;
+
               return (
                 <div
                   key={skill.title}
@@ -424,6 +557,7 @@ function SkillsSection() {
                     <div className="rounded-2xl bg-indigo-500/15 p-3 text-indigo-300">
                       <Icon className="h-5 w-5" />
                     </div>
+
                     <h3 className="text-xl font-bold">{skill.title}</h3>
                   </div>
 
@@ -445,6 +579,8 @@ function SkillsSection() {
   );
 }
 
+/* -------------------- EXPERIENCE -------------------- */
+
 function ExperienceSection() {
   return (
     <section className="bg-white px-6 py-28">
@@ -453,8 +589,9 @@ function ExperienceSection() {
           <p className="text-[11px] font-black uppercase tracking-[0.28em] text-indigo-500">
             Parcours
           </p>
+
           <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] text-slate-950 md:text-5xl">
-            Des expériences qui ont renforcé mon regard sur la communication et l’expérience utilisateur.
+            Des expériences qui m’ont appris à relier acquisition, contenu et expérience utilisateur.
           </h2>
         </div>
 
@@ -462,13 +599,22 @@ function ExperienceSection() {
           {EXPERIENCE.map((item) => (
             <div
               key={item.title}
-              className="grid gap-6 rounded-[2rem] border border-slate-100 bg-slate-50 p-7 md:grid-cols-[1fr_auto] md:items-start"
+              className="grid gap-6 rounded-[2rem] border border-slate-100 bg-slate-50 p-7 md:grid-cols-[1fr_auto]"
             >
               <div>
-                <h3 className="text-2xl font-bold tracking-tight text-slate-950">{item.title}</h3>
-                <p className="mt-2 text-sm font-semibold text-indigo-600">{item.role}</p>
-                <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600">{item.description}</p>
+                <h3 className="text-2xl font-bold tracking-tight text-slate-950">
+                  {item.title}
+                </h3>
+
+                <p className="mt-2 text-sm font-semibold text-indigo-600">
+                  {item.role}
+                </p>
+
+                <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600">
+                  {item.description}
+                </p>
               </div>
+
               <div className="text-left text-[11px] font-black uppercase tracking-[0.22em] text-slate-400 md:text-right">
                 {item.meta}
               </div>
@@ -479,22 +625,25 @@ function ExperienceSection() {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-sm">
             <h3 className="text-xl font-bold text-slate-950">Formation</h3>
+
             <div className="mt-5 space-y-4 text-sm leading-6 text-slate-600">
-              <p><strong className="text-slate-950">Ironhack</strong> — Web Development Bootcamp</p>
-              <p><strong className="text-slate-950">Design graphique & multimédia</strong> — parcours créatif</p>
-              <p><strong className="text-slate-950">Mathématiques</strong> — formation analytique et logique</p>
+              {EDUCATION.map((item) => (
+                <p key={item}>{item}</p>
+              ))}
             </div>
           </div>
 
           <div className="rounded-[2rem] border border-slate-100 bg-white p-7 shadow-sm">
-            <h3 className="text-xl font-bold text-slate-950">Langues & ouverture</h3>
+            <h3 className="text-xl font-bold text-slate-950">Langues & outils</h3>
+
             <div className="mt-5 flex items-start gap-4 text-sm leading-6 text-slate-600">
               <div className="rounded-2xl bg-indigo-50 p-3 text-indigo-600">
                 <Globe className="h-5 w-5" />
               </div>
+
               <p>
-                Français, anglais, sensibilité interculturelle et expérience entre plusieurs univers :
-                design, communication, retail, web et environnement international.
+                Français langue maternelle, anglais B2. Outils : Figma, Adobe Suite,
+                React, Tailwind, MERN, Shopify, WordPress, Google Ads et GA4.
               </p>
             </div>
           </div>
@@ -504,6 +653,8 @@ function ExperienceSection() {
   );
 }
 
+/* -------------------- CONTACT -------------------- */
+
 function ContactSection() {
   return (
     <section id="contact" className="px-6 py-28">
@@ -511,12 +662,14 @@ function ContactSection() {
         <p className="text-[11px] font-black uppercase tracking-[0.28em] text-indigo-500">
           Contact
         </p>
+
         <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] text-slate-950 md:text-5xl">
-          Construisons une communication plus claire, plus forte et plus mémorable.
+          Construisons des expériences digitales plus claires et plus mémorables.
         </h2>
+
         <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-600">
-          Je suis ouverte aux opportunités en communication digitale, marketing, contenu, branding,
-          UX writing et rôles où la clarté du message fait la différence.
+          Ouverte aux opportunités en marketing digital, contenu, branding,
+          UX/UI et e-commerce — notamment en alternance à partir de septembre 2026.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -527,6 +680,7 @@ function ContactSection() {
             <Mail className="h-4 w-4" />
             M’écrire par email
           </a>
+
           <a
             href="#"
             className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-7 py-4 text-sm font-bold text-slate-900 no-underline transition-all hover:border-indigo-200 hover:text-indigo-600 hover:shadow-lg"
@@ -540,14 +694,19 @@ function ContactSection() {
   );
 }
 
+/* -------------------- FOOTER -------------------- */
+
 function Footer() {
   return (
     <footer className="border-t border-slate-100 bg-white px-6 py-10">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row">
         <div>
-          <p className="text-sm font-black uppercase tracking-[0.24em] text-slate-900">Lynda Sadoudi</p>
+          <p className="text-sm font-black uppercase tracking-[0.24em] text-slate-900">
+            Lynda Sadoudi
+          </p>
+
           <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.22em] text-slate-400">
-            Communication · Design · Pédagogie
+            Marketing Digital · SEO · UX/UI · E-commerce
           </p>
         </div>
 
