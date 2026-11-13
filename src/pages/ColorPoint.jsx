@@ -1,14 +1,15 @@
 import React from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { asset } from "../lib/asset";
 
 /* -------------------- DATA -------------------- */
 
 const works = [
-  "/colorpoint/colorpoint1.png",
-  "/colorpoint/colorpoint2.png",
-  "/colorpoint/colorpoint3.png",
-  "/colorpoint/colorpoint4.png",
+  asset("/colorpoint/colorpoint1.png"),
+  asset("/colorpoint/colorpoint2.png"),
+  asset("/colorpoint/colorpoint3.png"),
+  asset("/colorpoint/colorpoint4.png"),
 ];
 
 /* -------------------- COMPONENT -------------------- */
@@ -54,7 +55,7 @@ export default function ColorPoint() {
           <div className="relative">
 
             <img
-              src="/colorpoint/colorpoint_logo.png"
+              src={asset("/colorpoint/colorpoint_logo.png")}
               alt="ColorPoint"
               className="rounded-[2.5rem] shadow-2xl w-full object-cover hover:scale-[1.02] transition duration-700"
             />

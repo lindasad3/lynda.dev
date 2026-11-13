@@ -1,13 +1,14 @@
 import React from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { asset } from "../lib/asset";
 
 /* -------------------- DATA -------------------- */
 
 const visuals = [
-  "/kura2.jpg",
-  "/kura3.jpg",
-  "/kura4.jpg",
+  asset("/kura2.jpg"),
+  asset("/kura3.jpg"),
+  asset("/kura4.jpg"),
 ];
 
 const steps = [
@@ -71,7 +72,7 @@ export default function Kuramono() {
           {/* RIGHT */}
           <div className="relative">
             <img
-              src="/kura1.jpg"
+              src={asset("/kura1.jpg")}
               alt="Kuramono"
               className="rounded-[2.5rem] shadow-2xl hover:scale-[1.02] transition duration-700"
             />

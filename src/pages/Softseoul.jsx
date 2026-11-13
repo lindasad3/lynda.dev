@@ -8,23 +8,24 @@ import {
   Brain,
   ShoppingBag,
 } from "lucide-react";
+import { asset } from "../lib/asset";
 
 /* -------------------- DATA -------------------- */
 
 const reels = [
   {
     type: "video",
-    src: "/video education.mp4",
+    src: asset("/video education.mp4"),
     label: "Éducation : Routine K-Beauty",
   },
   {
     type: "video",
-    src: "/comparaison.mp4",
+    src: asset("/comparaison.mp4"),
     label: "Autorité : Corée vs Viral",
   },
   {
     type: "video",
-    src: "/video 3.mp4",
+    src: asset("/video 3.mp4"),
     label: "Conversion : Focus Produit",
   },
 ];
@@ -156,7 +157,7 @@ export default function Softseoul() {
             <div className="absolute -inset-4 bg-[#F2D8D8]/40 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition duration-700"></div>
 
             <img
-              src="/softseoul-thumb.jpg"
+              src={asset("/softseoul-thumb.jpg")}
               alt="SoftSeoul"
               className="relative rounded-[2.5rem] shadow-2xl border border-white"
             />
@@ -315,7 +316,7 @@ export default function Softseoul() {
           <div className="relative">
 
             <img
-              src="/moodboard.png"
+              src={asset("/moodboard.png")}
               alt="Moodboard"
               className="rounded-[3rem] shadow-2xl"
             />

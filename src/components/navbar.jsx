@@ -1,5 +1,4 @@
 import React from "react";
-import { motion, useScroll, useTransform } from "motion/react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Github, Linkedin, Mail, Sparkles, ExternalLink, Play } from "lucide-react";
 // If you use shadcn/ui, these paths should exist. Otherwise replace with your own Button/Badge components.

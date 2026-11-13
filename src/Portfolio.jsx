@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "motion/react";
 import {
   ArrowRight,
   Mail,
@@ -14,6 +14,7 @@ import {
   Brain,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { asset } from "./lib/asset";
 
 /* -------------------- TRANSLATIONS -------------------- */
 
@@ -152,7 +153,7 @@ const PROJECTS = {
       impact:
         "Mise en place d'un parcours contenu : attirer, construire la confiance, puis introduire l'offre produit.",
       tags: ["Branding", "Content Strategy", "Social Commerce"],
-      image: "/gemini softseoul.webp",
+      image: asset("/gemini softseoul.webp"),
       link: "/softseoul",
     },
     {
@@ -164,7 +165,7 @@ const PROJECTS = {
       impact:
         "Clarification du parcours utilisateur et réduction de la friction cognitive.",
       tags: ["UX Writing", "Product Design", "AI"],
-      image: "/kura1.jpg",
+      image: asset("/kura1.jpg"),
       link: "/kuramono",
     },
     {
@@ -176,7 +177,7 @@ const PROJECTS = {
       impact:
         "Alignement entre identité visuelle, clarté commerciale et perception professionnelle.",
       tags: ["B2B", "Graphic Design", "Communication"],
-      image: "/Gemini_Generated_Image_qawic6qawic6qawi.png",
+      image: asset("/Gemini_Generated_Image_qawic6qawic6qawi.png"),
       link: "/colorpoint",
     },
   ],
@@ -190,7 +191,7 @@ const PROJECTS = {
       impact:
         "Built a content journey: attract, build trust, then introduce the product offer.",
       tags: ["Branding", "Content Strategy", "Social Commerce"],
-      image: "/gemini softseoul.webp",
+      image: asset("/gemini softseoul.webp"),
       link: "/softseoul",
     },
     {
@@ -202,7 +203,7 @@ const PROJECTS = {
       impact:
         "Clarified the user journey and reduced cognitive friction.",
       tags: ["UX Writing", "Product Design", "AI"],
-      image: "/kura1.jpg",
+      image: asset("/kura1.jpg"),
       link: "/kuramono",
     },
     {
@@ -214,7 +215,7 @@ const PROJECTS = {
       impact:
         "Alignment between visual identity, commercial clarity and professional perception.",
       tags: ["B2B", "Graphic Design", "Communication"],
-      image: "/Gemini_Generated_Image_qawic6qawic6qawi.png",
+      image: asset("/Gemini_Generated_Image_qawic6qawic6qawi.png"),
       link: "/colorpoint",
     },
   ],
@@ -540,7 +541,9 @@ function HeroSection({ t }) {
 
             <div className="flex items-center gap-3">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/lynda-sadoudi-66008a167/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="rounded-full border border-white/70 bg-white p-3 text-slate-500 shadow-sm transition-all hover:-translate-y-0.5 hover:text-indigo-600"
               >
@@ -581,7 +584,7 @@ function HeroSection({ t }) {
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/70 bg-white p-3 shadow-[0_30px_80px_rgba(15,23,42,0.12)] lg:rotate-[3deg]">
             <div className="overflow-hidden rounded-[2rem] bg-slate-200">
               <img
-                src="/profile.png"
+                src={asset("/profile.png")}
                 alt="Lynda Sadoudi"
                 className="aspect-[4/4.8] w-full object-cover"
               />
@@ -878,7 +881,9 @@ function ContactSection({ t }) {
             {t.contact.emailCta}
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/lynda-sadoudi-66008a167/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-7 py-4 text-sm font-bold text-slate-900 no-underline transition-all hover:border-indigo-200 hover:text-indigo-600 hover:shadow-lg"
           >
             <Linkedin className="h-4 w-4" />
